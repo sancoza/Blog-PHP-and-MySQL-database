@@ -9,8 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
@@ -22,32 +21,31 @@
 </head>
 
 <body>
-<?php include(ROOT_PATH.'/app/includes/header.php');?>
+  <?php include(ROOT_PATH . '/app/includes/header.php'); ?>
 
   <div class="auth-content">
 
     <form action="register.php" method="post">
+
       <h2 class="form-title">Register</h2>
 
-      <!-- <div class="msg error">
-        <li>Username required</li>
-      </div> -->
-
+      <?php include(ROOT_PATH . '/app/helpers/formErrors.php'); ?>
+      
       <div>
         <label>Username</label>
-        <input type="text" name="username" class="text-input">
+        <input type="text" name="username" value="<?php echo $username; ?>" class="text-input">
       </div>
       <div>
         <label>Email</label>
-        <input type="email" name="email" class="text-input">
+        <input type="email" name="email" value="<?php echo $email; ?>" class="text-input">
       </div>
       <div>
         <label>Password</label>
-        <input type="password" name="password" class="text-input">
+        <input type="password" name="password" value="<?php echo $password; ?>" class="text-input">
       </div>
       <div>
         <label>Password Confirmation</label>
-        <input type="password" name="passwordConf" class="text-input">
+        <input type="password" name="passwordConf" value="<?php echo $passwordConf; ?>" class="text-input">
       </div>
       <div>
         <button type="submit" name="register-btn" class="btn btn-big">Register</button>
